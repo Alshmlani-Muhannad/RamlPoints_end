@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Desert Trust Palette */
+  --color-primary: #F5F1E8; /* warm-neutral-100 */
+  --color-secondary: #2E5C8A; /* blue-800 */
+  --color-accent: #D4AF37; /* yellow-600 */
+  --color-background: #FEFCF7; /* warm-white */
+  --color-surface: #F0EDE6; /* warm-neutral-50 */
+  --color-text-primary: #1A1A1A; /* gray-900 */
+  --color-text-secondary: #666666; /* gray-600 */
+  --color-success: #1B5E20; /* green-800 */
+  --color-warning: #F57C00; /* orange-600 */
+  --color-error: #C62828; /* red-700 */
+  
+  /* Border Colors */
+  --color-border: #E8E4DD; /* warm-neutral-200 */
+  
+  /* Shadow Colors */
+  --shadow-light: 0 2px 8px rgba(46, 92, 138, 0.08);
+  --shadow-medium: 0 4px 16px rgba(46, 92, 138, 0.12);
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cairo', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white font-cairo font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out hover:shadow-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white font-cairo font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out hover:shadow-medium;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg p-6 shadow-light transition-all duration-200 ease-out;
+  }
+  
+  .card-elevated {
+    @apply bg-surface rounded-lg p-6 shadow-medium transition-all duration-200 ease-out;
+  }
+  
+  .input-field {
+    @apply border border-border bg-background px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-200 ease-out;
+  }
+  
+  .calculator-highlight {
+    @apply bg-accent text-white font-inter font-semibold px-4 py-2 rounded-lg shadow-medium transition-all duration-400 ease-in-out;
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .transition-smooth {
+    transition: all 300ms ease-out;
+  }
+  
+  .transition-quick {
+    transition: all 200ms ease-out;
+  }
+  
+  .transition-calculator {
+    transition: all 400ms ease-in-out;
+  }
+}

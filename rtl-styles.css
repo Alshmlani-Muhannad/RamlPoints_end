@@ -1,0 +1,235 @@
+/* RTL (Right-to-Left) Styles for Arabic Language */
+
+/* RTL Body Styles */
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* RTL Navigation */
+.rtl .flex.justify-between {
+    flex-direction: row-reverse;
+}
+
+.rtl .flex.items-center.space-x-3 {
+    flex-direction: row-reverse;
+    margin-left: 0;
+    margin-right: 0.75rem;
+}
+
+.rtl .flex.items-center.space-x-8 {
+    flex-direction: row-reverse;
+}
+
+.rtl .flex.items-center.space-x-8 > * {
+    margin-left: 2rem;
+    margin-right: 0;
+}
+
+.rtl .flex.items-center.space-x-3 > * {
+    margin-left: 0.75rem;
+    margin-right: 0;
+}
+
+/* RTL Grid Layouts */
+.rtl .grid.lg\\:grid-cols-2 {
+    direction: rtl;
+}
+
+.rtl .grid.grid-cols-2 {
+    direction: rtl;
+}
+
+.rtl .grid.md\\:grid-cols-3 {
+    direction: rtl;
+}
+
+.rtl .grid.md\\:grid-cols-4 {
+    direction: rtl;
+}
+
+/* RTL Text Alignment */
+.rtl .text-center.lg\\:text-left {
+    text-align: right;
+}
+
+.rtl .justify-center.lg\\:justify-start {
+    justify-content: flex-end;
+}
+
+/* RTL Flex Layouts */
+.rtl .flex.flex-col.sm\\:flex-row {
+    flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .rtl .flex.flex-col.sm\\:flex-row {
+        flex-direction: row-reverse;
+    }
+}
+
+/* RTL Icons and Arrows */
+.rtl svg {
+    transform: scaleX(-1);
+}
+
+.rtl .w-5.h-5.ml-2 {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+.rtl .w-4.h-4.mr-2 {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+.rtl .w-6.h-6.mr-3 {
+    margin-right: 0;
+    margin-left: 0.75rem;
+}
+
+/* RTL Form Elements */
+.rtl input,
+.rtl textarea,
+.rtl select {
+    text-align: right;
+}
+
+.rtl input::placeholder,
+.rtl textarea::placeholder {
+    text-align: right;
+}
+
+/* RTL Statistics and Numbers */
+.rtl .text-2xl.font-bold {
+    direction: ltr;
+    text-align: center;
+}
+
+/* RTL Footer */
+.rtl .flex.space-x-4 {
+    flex-direction: row-reverse;
+}
+
+.rtl .flex.space-x-4 > * {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+.rtl .flex.space-x-6 {
+    flex-direction: row-reverse;
+}
+
+.rtl .flex.space-x-6 > * {
+    margin-left: 1.5rem;
+    margin-right: 0;
+}
+
+/* RTL Mobile Menu */
+.rtl .space-y-3 a {
+    text-align: right;
+}
+
+/* RTL Calculator */
+.rtl .grid.grid-cols-2.gap-3 {
+    direction: rtl;
+}
+
+/* RTL Trust Indicators */
+.rtl .flex.items-center.justify-center.lg\\:justify-start {
+    justify-content: flex-end;
+}
+
+/* RTL Process Steps */
+.rtl .grid.md\\:grid-cols-3.gap-8 {
+    direction: rtl;
+}
+
+/* RTL Help Section */
+.rtl .grid.md\\:grid-cols-2.lg\\:grid-cols-3.gap-8 {
+    direction: rtl;
+}
+
+/* RTL Responsive Adjustments */
+@media (min-width: 1024px) {
+    .rtl .text-center.lg\\:text-left {
+        text-align: right;
+    }
+    
+    .rtl .justify-center.lg\\:justify-start {
+        justify-content: flex-end;
+    }
+    
+    .rtl .mx-auto.lg\\:mx-0 {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+/* RTL Font Adjustments for Arabic */
+.rtl h1,
+.rtl h2,
+.rtl h3,
+.rtl h4,
+.rtl h5,
+.rtl h6 {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+}
+
+.rtl p,
+.rtl span,
+.rtl div {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* RTL Button Adjustments */
+.rtl .btn-primary,
+.rtl .btn-secondary {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* RTL Card Adjustments */
+.rtl .card,
+.rtl .card-elevated {
+    text-align: right;
+}
+
+/* RTL Navigation Links */
+.rtl nav a {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* RTL Language Button */
+.rtl .language-btn {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ensure numbers and English text remain LTR in RTL context */
+.rtl .ltr-content {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* RTL Animation Adjustments */
+.rtl .transition-quick,
+.rtl .transition-smooth {
+    transition-property: all;
+}
+
+/* RTL Specific Spacing */
+.rtl .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: 0.75rem;
+    margin-left: 0;
+}
+
+.rtl .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: 1.5rem;
+    margin-left: 0;
+}
+
+.rtl .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: 2rem;
+    margin-left: 0;
+}
+
