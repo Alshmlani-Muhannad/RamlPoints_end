@@ -412,14 +412,14 @@
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                         </svg>
-                    </div>
-                    <h3 class="text-xl font-cairo font-semibold text-secondary mb-3">Processing Today</h3>
-                    <div class="space-y-2 mb-4">
-                        <div class="text-2xl font-bold text-accent">247</div>
-                        <div class="text-sm text-text-secondary">Conversions in progress</div>
-                    </div>
-                    <div class="text-sm text-success font-medium">Average: 3.2 days completion</div>
-                </div>
+                   <div>
+    <h3 class="text-xl font-cairo font-semibold text-secondary mb-3">Processing Today</h3>
+    <div class="space-y-2 mb-4">
+        <div class="text-2xl font-bold text-accent" id="daily-conversions">247</div>
+        <div class="text-sm text-text-secondary">Conversions in progress</div>
+    </div>
+    <div class="text-sm text-success font-medium">Average: 3.2 days completion</div>
+</div>
 
                 <!-- Contact Form -->
                 <div class="card hover:shadow-medium transition-smooth">
@@ -559,6 +559,28 @@
                 calculationResult.classList.add('hidden');
             }
         }
+        <script>
+function getDailyRandomNumber() {
+    // Get today's date as a seed
+    const today = new Date();
+    const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+    
+    // Simple seeded random function
+    function seededRandom(seed) {
+        const x = Math.sin(seed) * 10000;
+        return x - Math.floor(x);
+    }
+    
+    // Generate random number between 150-350
+    const randomNum = Math.floor(seededRandom(seed) * (350 - 150 + 1)) + 150;
+    
+    // Update the display
+    document.getElementById('daily-conversions').textContent = randomNum;
+}
+
+// Run when page loads
+getDailyRandomNumber();
+</script>
     </script>
 <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
